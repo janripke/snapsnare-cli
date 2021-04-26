@@ -12,13 +12,11 @@ class JammersCommand(Command):
     @click.option('-m', '--htmlstatus', required=False, default='htmlstatus.html')
     def execute(htmlstatus):
         ds = utils.load_json('snapsnare-ds.json')
-        print(ds)
-        print(htmlstatus)
         connector = ConnectorFactory.create_connector(ds)
         jammer_repository = JammerRepository(connector)
 
-        # use the environment variable JAMULUS home to find the location of the status file.
-        # the status file contains the list of online jammers.
+        # use the environment variable JAMULUS home to find the location of the html status file.
+        # the html status file contains the list of online jammers.
         # if no path is given /opt/jamulus is assumed (for testing purposes)
         jamulus_home = os.environ.get('JAMULUS_HOME', os.path.join(f'{os.sep}opt', 'jamulus'))
         content = utils.load(jamulus_home, htmlstatus)

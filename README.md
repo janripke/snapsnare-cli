@@ -15,8 +15,7 @@ Table of contents:
 snapsnare-cli currently supports Python 3.5 and higher.
 
 # Getting started
-snapsnare consists of 2 parts, a commandline interface, this tool, and a postgresql database.
-When you want to use snapsnare-cli it is recommended that you follow the instructions described in the general installation section.
+snapsnare consists of 2 parts, a commandline interface, this tool, and the snapsnare-api rest server
 
 
 ## General installation

@@ -1,5 +1,5 @@
 {
-  "name": "snapsnare-cli",
+  "name": "snapsnare_cli",
   "repository": "https://github.com/janripke/snapsnare-cli.git",
   "technology": "python"
 }

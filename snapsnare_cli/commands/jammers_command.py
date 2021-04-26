@@ -26,7 +26,7 @@ class JammersCommand(Command):
         # use the environment variable JAMULUS home to find the location of the html status file.
         # the html status file contains the list of online jammers.
         # if no path is given /opt/jamulus is assumed (for testing purposes)
-        jamulus_home = os.environ.get('JAMULUS_HOME', os.path.join(f'{os.sep}opt', 'jamulus'))
+        jamulus_home = os.environ.get('HOME', os.path.join(f'{os.sep}opt', 'jamulus'))
         content = utils.load(jamulus_home, htmlstatus)
 
         jammers = {

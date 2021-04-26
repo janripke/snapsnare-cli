@@ -20,21 +20,19 @@ When you want to use snapsnare-cli it is recommended that you follow the instruc
 
 
 ## General installation
-snapsnare-cli depends on the snapsnare database. 
-Before you start the installation of snapsnare-cli it is recommended you execute these [installation instructions](https://github.com/janripke/snapsnare-db/blob/main/README.md) first.
+The snapsnare-cli uses the snapsnare-api rest server to communicatie with snapsnare.
 
 ### configure snapsnare
-For safety reasons the snapsnare database credentials are stored on your local machine. 
-To be more exact under ~/.snapsnare/snapsnare-ds.json
+The endpoint of the snapsnare-api rest server used by snapsnare-cli is stored on your local machine
+To be more exact in ~/.snapsnare/snapsnare.json
 
-create the snapsnare-ds.json in ~/.snapsnare folder: paste the following into this file:
+In this example it is assumed that the snapsnare-api rest server is running on your localhost and uses port 5001
+create the snapsnare.json file in ~/.snapsnare folder: paste the following into this file:
 ```python
 {
-  "type": "postgresql",
-  "host": "localhost",
-  "db": "snapsnare",
-  "username": "snapsnare_owner",
-  "password": "snapsnare_owner"
+  "snapsnare-api": {
+    "endpoint": "http://localhost:5001"
+  }
 }
 ```
 
@@ -51,21 +49,19 @@ snapsnare-cli version 0.0.1-dev0
 
 
 ## Development installation
-snapsnare-cli depends on the snapsnare database. 
-Before you start the installation of snapsnare it is recommended you execute these [installation instructions](https://github.com/janripke/snapsnare-db/blob/main/README.md) first.
+The snapsnare-cli uses the snapsnare-api rest server to communicatie with snapsnare.
 
 ### configure snapsnare-cli
-For safety reasons the snapsnare database credentials are stored on your local machine. 
-To be more exact under ~/.snapsnare/snapsnare-ds.json
+The endpoint of the snapsnare-api rest server used by snapsnare-cli is stored on your local machine
+To be more exact in ~/.snapsnare/snapsnare.json
 
-create the snapsnare-ds.json in ~/.snapsnare folder: paste the following into this file:
+In this example it is assumed that the snapsnare-api rest server is running on your localhost and uses port 5001
+create the snapsnare.json file in ~/.snapsnare folder: paste the following into this file:
 ```python
 {
-  "type": "postgresql",
-  "host": "localhost",
-  "db": "snapsnare",
-  "username": "snapsnare_owner",
-  "password": "snapsnare_owner"
+  "snapsnare-api": {
+    "endpoint": "http://localhost:5001"
+  }
 }
 ```
 

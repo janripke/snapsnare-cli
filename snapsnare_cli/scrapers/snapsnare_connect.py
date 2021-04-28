@@ -41,3 +41,14 @@ class SnapsnareConnect:
         response = request.post(url, jammers)
         content = response.json()
         return content.get('uuid')
+
+    def create_icecast_status(self, source):
+        access_token = self._auth()
+        endpoint = self.get_endpoint()
+        url = f"{endpoint}/icecast/statuses/create"
+
+        proxies = self.get_proxies()
+        request = BearerRequest(access_token, proxies=proxies)
+        response = request.post(url, source)
+        content = response.json()
+        return content.get('uuid')

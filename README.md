@@ -66,13 +66,13 @@ create the snapsnare.json file in ~/.snapsnare folder: paste the following into 
 
 ## install snapsnare-cli
 ```shell
-pip3 install git+https://github.com/janripke/snapsnare-cli.git@0.0.3#egg=snapsnare_cli
+pip3 install git+https://github.com/janripke/snapsnare-cli.git@0.0.4#egg=snapsnare_cli
 ```
 
 ## run snapsnare-cli
 ```shell
 $ snapsnare-cli
-snapsnare-cli version 0.0.3
+snapsnare-cli version 0.0.4
 ```
 
 

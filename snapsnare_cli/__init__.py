@@ -1,4 +1,4 @@
-__version__ = '0.0.4-dev0'
+__version__ = '0.0.4'
 
 __title__ = 'snapsnare-cli'
 __description__ = 'snapsnare commandline interface, the sample base for musicians'
